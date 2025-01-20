@@ -1,0 +1,197 @@
+:root {
+    --cor-azul: #0000AA;
+}
+
+body {
+    background-color: #0000AA;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_Middle { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    border: #ffffff 2px solid;
+    height: 500px;
+    width: 800px;
+}
+
+.categoriesFromTasks {
+    display: flex; 
+    justify-content: space-evenly;
+    padding: 10px;
+    width: 75%;
+}
+
+hr {
+    border: #ffffff 2px solid;
+    width: 75%;
+}
+
+.termin_ModifyTask_button {
+    background-color: #0000AA;
+    color: #ffffff;
+    border: #ffffff 2px solid;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.termin_ModifyTask_button:hover {
+    background-color: #ffffff;
+    color: #0000AA;
+    border: #ffffff 2px solid;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.TasksToDo {
+    background-color: #0000AA;
+    color: #ffffff;
+    border: #ffffff 2px solid;
+    font-size: 16px;
+    height: 50px;
+    padding: 5px;
+}
+
+.TasksToDo:hover {
+    background-color: #ffffff;
+    color: #0000aa;
+    border: #ffffff 2px solid;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.telaDoTerminal {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    height: 800px;
+}
+
+.telaDeTarefas {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-items: center;
+    gap: 10px;
+}
+
+.tdf {
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+ul {
+    display: flex;
+    align-items: center;
+}
+
+.grupoDeSalas {
+    display: flex;
+}
+
+.Left_Salas-grupo1 {
+    display: flex;
+    flex-direction: column;
+    height: 156px;
+}
+
+.Left_Salas-grupo2 {
+    display: flex;
+    flex-direction: column;
+    height: 156px;
+}
+
+.P_Sala {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    border: black 2px solid;
+}
+
+.imp_Salas{
+    width: 20px;
+    height: 20px;
+}
+
+.TheseDutos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 156px;
+}
+
+.corredoresdomeio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 2px;
+}
+
+.SalaDoMeio {
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    border: black 2px solid;
+}
+
+.SalaDoBoss {
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    border: black 2px solid;
+}
+
+.dutoHorizontal {
+    width: 20px;
+    height: 5px;
+    background-color: #ffffff;
+    border: black 2px solid;
+}
+
+.dutoVertical {
+    width: 5px;
+    height: 20px;
+    background-color: #ffffff;
+    border: black 2px solid;
+}
+
+.ImpossibleDucty {
+    width: 5px;
+    height: 20px;
+    background-color: transparent;
+    border: transparent 2px solid;
+}
+
+.Right_Salas-grupo1 {
+    display: flex;
+    flex-direction: column;
+    height: 156px;
+}
+
+.Right_Salas-grupo2 {
+    display: flex;
+    flex-direction: column;
+    height: 156px;
+}
+
+.Animatronic {
+    width: 10px;
+    height: 10px;
+    background-color: #0000AA;
+
+}
