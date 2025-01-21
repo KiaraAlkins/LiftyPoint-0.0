@@ -33,7 +33,7 @@ main {
     width: 75%;
 }
 
-hr {
+.LinhaSeparadora {
     border: #ffffff 2px solid;
     width: 75%;
 }
