@@ -49,6 +49,113 @@ const telaDoTerminal = document.createElement('div');
 telaDoTerminal.classList.add('telaDoTerminal');
 sectionMiddle.appendChild(telaDoTerminal);
 
+//Constar Salas
+//Constar Salas
+//Constar Salas
+
+//divdasSalas
+const divGrupoDeSalas = document.createElement('grupoDeSalas');
+divGrupoDeSalas.classList.add('grupoDeSalas');
+
+//Salas da esquerda
+
+const divLeftSalasGP1 = document.createElement('div')
+divLeftSalasGP1.classList.add('grupoDeSalas');
+divGrupoDeSalas.appendChild(divLeftSalasGP1);
+
+const divPsala_A1 = document.createElement('div');
+divPsala_A1.classList.add('P_Sala');
+divLeftSalasGP1.appendChild(divPsala_A1);
+
+const divPsala_A2 = document.createElement('div');
+divPsala_A2.classList.add('P_Sala');
+divLeftSalasGP1.appendChild(divPsala_A2);
+
+const divPsala_A3 = document.createElement('div');
+divPsala_A3.classList.add('P_Sala');
+divLeftSalasGP1.appendChild(divPsala_A3);
+
+const divPsala_A4 = document.createElement('div');
+divPsala_A4.classList.add('P_Sala');
+divLeftSalasGP1.appendChild(divPsala_A4);
+
+const divPsala_A5 = document.createElement('div');
+divPsala_A5.classList.add('P_Sala');
+divLeftSalasGP1.appendChild(divPsala_A5);
+
+const divPsala_A6 = document.createElement('div');
+divPsala_A6.classList.add('P_Sala');
+divLeftSalasGP1.appendChild(divPsala_A6);
+
+//Corredores do meio 
+
+const corredorDoMeio = document.createElement('div');
+corredorDoMeio.classList.add('corredoresdomeio');
+divGrupoDeSalas.appendChild(corredorDoMeio)
+
+const salaDoMeio = document.createElement('div');
+salaDoMeio.classList.add('SalaDoMeio');
+corredorDoMeio.appendChild(salaDoMeio);
+
+const salaDoGuarda = document.createElement('div');
+salaDoGuarda.classList.add('SalaDoBoss'); 
+corredorDoMeio.appendChild(salaDoMeio);
+
+//salas da direita 
+
+const divRightSalasGP1 = document.createElement('div')
+divRightSalasGP1.classList.add('grupoDeSalas');
+divGrupoDeSalas.appendChild(divRightSalasGP1);
+
+const divPsala_A7 = document.createElement('div');
+divPsala_A7.classList.add('P_Sala');
+divRightSalasGP1.appendChild(divPsala_A7);
+
+const divPsala_A8 = document.createElement('div');
+divPsala_A8.classList.add('P_Sala');
+divRightSalasGP1.appendChild(divPsala_A8);
+
+const divPsala_A9 = document.createElement('div');
+divPsala_A9.classList.add('P_Sala');
+divRightSalasGP1.appendChild(divPsala_A9);
+
+const divPsala_A10 = document.createElement('div');
+divPsala_A10.classList.add('P_Sala');
+divRightSalasGP1.appendChild(divPsala_A10);
+
+const divPsala_A11 = document.createElement('div');
+divPsala_A11.classList.add('P_Sala');
+divRightSalasGP1.appendChild(divPsala_A11);
+
+const divPsala_A12 = document.createElement('div');
+divPsala_A12.classList.add('P_Sala');
+divRightSalasGP1.appendChild(divPsala_A12);
+
+
+function abrirSensor() {
+    console.log(telaDoTerminal);
+console.log(divGrupoDeSalas);
+
+    console.log('Deu Errados')
+    // Remove qualquer tela existente no terminal
+    while (telaDoTerminal.firstChild) {
+        telaDoTerminal.removeChild(telaDoTerminal.firstChild);
+    }
+
+    // Adiciona o conteúdo do sensor
+    telaDoTerminal.appendChild(divGrupoDeSalas);
+}
+
+buttonSensor.addEventListener('click', abrirSensor)
+
+
+//////////
+//////////
+//////////
+
+
+
+
 //PorcentagemdeTarefa
 
     let PorcentagemdeTarefa1 = 0
@@ -76,15 +183,8 @@ sectionMiddle.appendChild(telaDoTerminal);
 
 /////
 
-//Tarefas feitas
-
-    let lote1Pedido = false;
-    let lote2Pedido = false;
-    let lote3Pedido = false;
-    let lote4Pedido = false;
-    let lote5Pedido = false;
-
-/////
+const divTelaDeTarefas = document.createElement('div');
+divTelaDeTarefas.classList.add('telaDeTarefas');
 
 function AbrirTarefas() {
 
@@ -98,8 +198,7 @@ function AbrirTarefas() {
         }
 
     
-    const divTelaDeTarefas = document.createElement('div');
-    divTelaDeTarefas.classList.add('telaDeTarefas');
+
     telaDoTerminal.appendChild(divTelaDeTarefas);
 
     const divTDF1 = document.createElement('div');
@@ -117,8 +216,7 @@ function AbrirTarefas() {
                 loteDeSup1.innerText = 'Lote 1 de suprimentros - %' + PorcentagemdeTarefa1; // Atualiza o texto do botão
                 if (PorcentagemdeTarefa1 >= 100) { // Se a porcentagem atingir 100%, parar o intervalo
                     clearInterval(intervalo);
-                    tarefa1Bool = true
-                    alert('Lote 1 completo!');
+                    tarefa1Bool = true;
                     if (verificarPermissao()) {
                         mostrarBotaoFinalizar()
                     };
@@ -135,11 +233,10 @@ function AbrirTarefas() {
         if (!tarefa2Bool) {
             const intervalo = setInterval(() => {
                 PorcentagemdeTarefa2++; // Aumenta a porcentagem em 1
-                loteDeSup2.innerText = 'Lote 1 de suprimentros - %' + PorcentagemdeTarefa2; // Atualiza o texto do botão
+                loteDeSup2.innerText = 'Lote 2 de suprimentros - %' + PorcentagemdeTarefa2; // Atualiza o texto do botão
                 if (PorcentagemdeTarefa2 >= 100) { // Se a porcentagem atingir 100%, parar o intervalo
                     clearInterval(intervalo);
-                    tarefa2Bool = true
-                    alert('Lote 1 completo!');
+                    tarefa2Bool = true;
                     if (verificarPermissao()) {
                         mostrarBotaoFinalizar()
                     };
@@ -156,11 +253,10 @@ function AbrirTarefas() {
         if (!tarefa3Bool) {
             const intervalo = setInterval(() => {
                 PorcentagemdeTarefa3++; // Aumenta a porcentagem em 1
-                loteDeSup3.innerText = 'Lote 1 de suprimentros - %' + PorcentagemdeTarefa3; // Atualiza o texto do botão
+                loteDeSup3.innerText = 'Lote 3 de suprimentros - %' + PorcentagemdeTarefa3; // Atualiza o texto do botão
                 if (PorcentagemdeTarefa3 >= 100) { // Se a porcentagem atingir 100%, parar o intervalo
                     clearInterval(intervalo);
                     tarefa3Bool = true
-                    alert('Lote 1 completo!');
                     if (verificarPermissao()) {
                         mostrarBotaoFinalizar()
                     };
@@ -181,11 +277,10 @@ function AbrirTarefas() {
         if (!tarefa4Bool) {
             const intervalo = setInterval(() => {
                 PorcentagemdeTarefa4++; // Aumenta a porcentagem em 1
-                loteDeSup4.innerText = 'Lote 1 de suprimentros - %' + PorcentagemdeTarefa4; // Atualiza o texto do botão
+                loteDeSup4.innerText = 'Lote 4 de suprimentros - %' + PorcentagemdeTarefa4; // Atualiza o texto do botão
                 if (PorcentagemdeTarefa4 >= 100) { // Se a porcentagem atingir 100%, parar o intervalo
                     clearInterval(intervalo);
                     tarefa4Bool = true
-                    alert('Lote 1 completo!');
                     if (verificarPermissao()) {
                         mostrarBotaoFinalizar()
                     };
@@ -202,11 +297,10 @@ function AbrirTarefas() {
         if (!tarefa5Bool) {
             const intervalo = setInterval(() => {
                 PorcentagemdeTarefa5++; // Aumenta a porcentagem em 1
-                loteDeSup5.innerText = 'Lote 1 de suprimentros - %' + PorcentagemdeTarefa5; // Atualiza o texto do botão
+                loteDeSup5.innerText = 'Lote 5 de suprimentros - %' + PorcentagemdeTarefa5; // Atualiza o texto do botão
                 if (PorcentagemdeTarefa5 >= 100) { // Se a porcentagem atingir 100%, parar o intervalo
                     clearInterval(intervalo);
                     tarefa5Bool = true;
-                    alert('Lote 1 completo!');
                     if (verificarPermissao()) {
                         mostrarBotaoFinalizar()
                     };
@@ -215,15 +309,18 @@ function AbrirTarefas() {
         }
     })
 
+    tela1Ligada = true;
+
     const Finalizar = document.createElement('button');
     Finalizar.style.display = 'none'
     Finalizar.innerText = 'Finish Night';
     divTDF2.appendChild(Finalizar);
     Finalizar.addEventListener('click', () => {
-        sectionMiddle.remove()
+        telaDoTerminal.remove()
+        return tela1Ligada = false;
     })
 
-    tela1Ligada = true;
+    
     }
 }
 
